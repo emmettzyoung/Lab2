@@ -22,13 +22,13 @@ map.on('load', () => {
     // Add a data source containing GeoJSON data
     map.addSource('off-leash-areas', {
         type: 'geojson',
-        data: 'https://github.com/emmettzyoung/Lab2/main/data/Off Leash Areas - 4326.geojson'
+        data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/OffLeashAreas_4326.geojson'
     }
     );
     // Visualize data layer on map
     map.addLayer({
-        'id': 'off-leash-areas',
-        'type': 'point',
+        'id': 'off-leash-point',
+        'type': 'circle',
         'source': 'off-leash-areas',
         'paint': {
             'circle-color': '#B42222',
