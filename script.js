@@ -22,17 +22,17 @@ map.on('load', () => {
     // Add a data source containing GeoJSON data
     map.addSource('off-leash-areas', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/OffLeashAreas_4326.geojson'
+        data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/OffLeashAreas.geojson'
     }
     );
     // Visualize data layer on map
     map.addLayer({
         'id': 'off-leash-point',
-        'type': 'circle',
+        'type': 'symbol',
         'source': 'off-leash-areas',
-        'paint': {
-            'circle-color': '#B42222',
-            'circle-radius': 5
+        'layout': {
+            'icon-image': 'marker-15',  // Built-in Mapbox marker
+            'icon-size': 1.5
         }
     });
 });
