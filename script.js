@@ -31,8 +31,18 @@ map.on('load', () => {
         'type': 'fill',
         'source': 'neighbourhoods',
         'paint': {
-            'fill-color': '#fffaf0',
-            'fill-opacity': 0.8
+            'fill-color': 'white',
+            'fill-opacity': 0.5
+        }
+    });
+    
+    map.addLayer({
+        'id': 'neighbourhoods-outline',
+        'type': 'line',
+        'source': 'neighbourhoods',
+        'paint': {
+            'line-color': '#ff668c',
+            'line-width': 3
         }
     });
 });
