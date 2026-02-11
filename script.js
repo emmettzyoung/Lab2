@@ -20,36 +20,19 @@ map.addControl(
 map.on('load', () => {
 
     // Add a data source containing GeoJSON data
-    map.addSource('uoft-data', {
+    map.addSource('off-leash-areas', {
         type: 'geojson',
-        data: {
-            "type": "FeatureCollection",
-            "features": [
-                {
-                    "type": "Feature",
-                    "properties": {
-                        "name": "Sidney Smith Hall"
-                    },
-                    "geometry": {
-                        "coordinates": [
-                            -79.39865237301687,
-                            43.662343395037766
-                        ],
-                        "type": "Point"
-                    }
-                }
-            ]
-        }
+        data: 'https://github.com/emmettzyoung/Lab2/main/data/Off Leash Areas - 4326.geojson'
     }
     );
     // Visualize data layer on map
     map.addLayer({
-        'id': 'uoft-pnt',
-        'type': 'circle',
-        'source': 'uoft-data',
+        'id': 'off-leash-areas',
+        'type': 'point',
+        'source': 'off-leash-areas',
         'paint': {
-            'circle-radius': 6,
-            'circle-color': '#B42222'
+            'circle-color': '#B42222',
+            'circle-radius': 5
         }
     });
 });
