@@ -7,15 +7,6 @@ const map = new mapboxgl.Map({
     zoom: 12
 });
 
-map.addControl(
-    new MapboxGeocoder({
-        container: 'geocoder',
-        accessToken: mapboxgl.accessToken,
-        useBrowserFocus: true,
-        mapboxgl: mapboxgl
-    })
-);
-
 
 map.on('load', () => {
 
@@ -23,6 +14,16 @@ map.on('load', () => {
     map.addSource('neighbourhoods', {
         type: 'geojson',
         data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/Neighbourhoods.geojson'
+    }
+    );
+    map.addSource('OutdoorArtificialIceRinks', {
+    type: 'geojson',
+    data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/OutdoorArtificialIceRinks.geojson'
+    }
+    );
+    map.addSource('IndoorIceRinks', {
+    type: 'geojson',
+    data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/IndoorIceRinks.geojson'
     }
     );
     // Visualize data layer on map
@@ -35,7 +36,6 @@ map.on('load', () => {
             'fill-opacity': 0.5
         }
     });
-    
     map.addLayer({
         'id': 'neighbourhoods-outline',
         'type': 'line',
@@ -43,6 +43,24 @@ map.on('load', () => {
         'paint': {
             'line-color': '#ff668c',
             'line-width': 3
+        }
+    });
+    map.addLayer({
+        'id': 'OutdoorArtificialIceRinks',
+        'type': 'circle',
+        'source': 'OutdoorArtificialIceRinks',
+        'paint': {
+            'circle-color': 'royalblue',
+            'circle-radius': 5
+        }
+    });
+    map.addLayer({
+        'id': 'IndoorIceRinks',
+        'type': 'circle',
+        'source': 'IndoorIceRinks',
+        'paint': {
+            'circle-color': 'darkblue',
+            'circle-radius': 5
         }
     });
 });
