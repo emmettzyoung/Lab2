@@ -20,19 +20,19 @@ map.addControl(
 map.on('load', () => {
 
     // Add a data source containing GeoJSON data
-    map.addSource('off-leash-areas', {
+    map.addSource('neighbourhoods', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/OffLeashAreas.geojson'
+        data: 'https://raw.githubusercontent.com/emmettzyoung/Lab2/main/data/Neighbourhoods.geojson'
     }
     );
     // Visualize data layer on map
     map.addLayer({
-        'id': 'off-leash-point',
-        'type': 'symbol',
-        'source': 'off-leash-areas',
-        'layout': {
-            'icon-image': 'marker-15',  // Built-in Mapbox marker
-            'icon-size': 1.5
+        'id': 'neighbourhoods-fill',
+        'type': 'fill',
+        'source': 'neighbourhoods',
+        'paint': {
+            'fill-color': '#fffaf0',
+            'fill-opacity': 0.8
         }
     });
 });
