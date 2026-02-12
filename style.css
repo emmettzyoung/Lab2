@@ -1,3 +1,4 @@
+/* Map, body, and text styles */
 .map-container {
     position: absolute;
     height: 85%;
@@ -27,6 +28,7 @@ p {
     box-align: center;
 }
 
+/* Button-specific styles*/
 .btn-outline-gray {
     color: #FAF5F5;
     border-color: floralwhite;
@@ -43,6 +45,7 @@ p {
     border-color: floralwhite;
 }
 
+/* Styling for svg file of skating person */
 .filter-white {
     filter: invert(100%) sepia(0%) saturate(2546%) hue-rotate(289deg) brightness(120%) contrast(92%);
 }

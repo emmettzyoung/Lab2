@@ -23,22 +23,22 @@
 </head>
 
 <body>
-    <div class="center-text">
+    <div class="center-text"> <!---Header of the page--->
         <h1>Ice Skating and Ice Dating - A Map of all Indoor and Outdoor Ice Skating Rinks in Toronto!</h1>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid"> 
         <div class="row-text-center">
             <div class="row">
-                <div class="col-2">
+                <div class="col-2"> <!---Left column of the page--->
                     <img src=data/file.svg class="filter-white" alt="Ice Skating Icon" width="90" height="90">
                     <img src=data/file.svg class="filter-white" alt="Ice Skating Icon" width="90" height="90">
                     <img src=data/file.svg class="filter-white" alt="Ice Skating Icon" width="90" height="90">
                     <br><br>
-                    <p>Where would you want to go ice skating? Check out the map to find the nearest rink to you! You
-                        can
-                        also click on the markers to find out more information about each rink, such as its name,
-                        address,
-                        and whether it's an indoor or outdoor rink. Happy skating!</p>
+                    <p>Do you and your significant other not know what to do for Valentine's Day? Try out ice skating!
+                        Check out the map to find the nearest rink to you! You can also click on the buttons below to 
+                        find out the name of each rink. You may also want to use the geocoder in the top right corner
+                        to find where you currently are in the city and see if there are any rinks around you. Happy 
+                        skating!</p>
                     <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                         <input type="radio" class="btn-check" name="btnradio" id="btnoutdoor" autocomplete="off"
                             checked>
@@ -47,7 +47,7 @@
                         <label class="btn btn-outline-gray" for="btnindoor">Indoor Rinks</label>
                     </div>
                 </div>
-                <div class="col min-vh-100 flex-column">
+                <div class="col min-vh-100 flex-column"> <!---Map that takes up the rest of the page--->
                     <div id="my-map" class="map-container"></div>
                 </div>
             </div>
