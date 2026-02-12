@@ -4,6 +4,7 @@
 - index.html: Responsible for loading in necessary packages and displaying the front end code correctly, with features presented here such as buttons and headers.
 - script.js: Responsible for the functionality of elements defined in the index.html file, including the map and the buttons, while also adding in hover mechanics for the skating rinks (both outdor and indoor) and neighbourhoods as well.
 - style.css: Responsible for the styling of the body, map, buttons, headers, and text, all to ensure user experience is appealing. 
+- data: Houses GeoJSON files, as well as the skating person SVG file.
 
 ### The intended use of this map:
 This map is intended for those who wish to ice skate, particularily for Valentines day. This tool will allow those celebrating
